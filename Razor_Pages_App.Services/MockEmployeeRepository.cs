@@ -14,10 +14,10 @@ namespace Razor_Pages_App.Services
         {
             _employeeList = new List<Employee>()
             { 
-              new Employee(){ Id = 1, Name = "Felly KANYIKI", Email = "fellyka@sollers.co.za", Department = Dept.HR, PhonePathy = ""},
-              new Employee(){ Id = 1, Name = "Rosette KANYIKI", Email = "rosetteyka@sollers.co.za", Department = Dept.HR, PhonePathy = "EmployerFemale1.jpg"},
-              new Employee(){ Id = 1, Name = "Jovial KANYIKI", Email = "jovialka@sollers.co.za", Department = Dept.HR, PhonePathy = "EmployerMale1.jpg"},
-              new Employee(){ Id = 1, Name = "Kany KANYIKI", Email = "kanyka@sollers.co.za", Department = Dept.HR }
+              new Employee(){ Id = 1, Name = "Felly KANYIKI", Email = "fellyka@sollers.co.za", Department = Dept.HR},
+              new Employee(){ Id = 1, Name = "Rosette KANYIKI", Email = "rosetteka@sollers.co.za", Department = Dept.HR, PhotoPath = "EmployeeFemale1.jpg"},
+              new Employee(){ Id = 1, Name = "Jovial KANYIKI", Email = "jovialka@sollers.co.za", Department = Dept.HR, PhotoPath = "EmployeeMale1.jpg"},
+              new Employee(){ Id = 1, Name = "Kany KANYIKI", Email = "kanyka@sollers.co.za", Department = Dept.HR, PhotoPath = "EmployeeMale2.png" }
             };
         }
 

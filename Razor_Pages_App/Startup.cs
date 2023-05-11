@@ -34,6 +34,7 @@ namespace Razor_Pages_App
                 options.LowercaseUrls = true; 
                 options.LowercaseQueryStrings = true;
                 options.AppendTrailingSlash = true;
+                options.ConstraintMap.Add("even",typeof(EvenConstraint));
             });
         }
 

@@ -7,5 +7,7 @@ namespace Razor_Pages_App.Services
     {
         IEnumerable<Employee> GetEmployeeList();
         Employee GetEmployee(int id);
+        Employee Update(Employee updatedEmployee);
+
     }
 }

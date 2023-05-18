@@ -26,6 +26,11 @@ namespace Razor_Pages_App.Pages.Employees
         [BindProperty]
         public IFormFile Photo { get; set; }
 
+        [BindProperty]
+        public bool Notify { get; set; }
+
+        public string Message { get; set; }
+
         public IActionResult OnGet(int id)//Model binding will automatically bind the id with the route parameter
         {
           Employee = _employeeRepository.GetEmployee(id);
@@ -51,6 +56,24 @@ namespace Razor_Pages_App.Pages.Employees
             }
             Employee = _employeeRepository.Update(employee);
             return RedirectToPage("Index");
+        }
+
+        public IActionResult OnPostUpdateNotificationsPreferences(int id)
+        {
+            if(Notify)
+            {
+                Message = "Thank you for turning on notifications";
+            }
+
+            else
+            {
+                Message = "You have turned off email notifications";
+            }
+
+            TempData["message"] = Message;
+
+            //Employee = _employeeRepository.GetEmployee(id);
+            return RedirectToPage("Details", new {id = id});
         }
 
         private string ProcessUploadedFile()

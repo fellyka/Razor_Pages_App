@@ -7,9 +7,28 @@
     var photoPath = "~/images/" + (Model.Employee.PhotoPath ?? "noimages.jpg");
 }
 
-<h1>Edit</h1>
+<h1>Notification Preferences</h1>
+<form method="post" asp-page-handler="UpdateNotificationsPreferences">
+    <div class="form-check">
+        <input asp-for="Notify" class="form-check-input" />
+        <label asp-for="Notify" class="form-check-label">
+            Receive email notification when my details change
+        </label>
+    </div>
+   <button type="submit" class="btn btn-primary">
+       Update Notification Preferences
+   </button>
+   @* @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-primary">
+            @Model.Message
+        </div>
+    }*@
+</form>
+<hr/>
 
-<form  enctype="multipart/form-data" method="post" class="mt-3">
+<h1>Edit</h1>
+<form  enctype="multipart/form-data" method="post" class="mt-3" asp-page-handler="OnPost">
     <div asp-validation-summary="All" class="text-danger"></div>
 
    @* Use hidden input elements to store employee id and PhotoPath which we need when we submit the form 

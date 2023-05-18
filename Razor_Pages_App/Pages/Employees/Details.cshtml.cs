@@ -17,6 +17,9 @@ namespace Razor_Pages_App.Pages.Employees
 
         public Employee Employee { get; private set; }
 
+        [TempData]
+        public string Message { get; set; }
+
 
         public IActionResult OnGet(int id)
         {

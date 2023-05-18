@@ -35,6 +35,7 @@ namespace Razor_Pages_App.Services
                 employee.Name = updatedEmployee.Name;
                 employee.Email = updatedEmployee.Email;
                 employee.Department = updatedEmployee.Department;
+                employee.PhotoPath = updatedEmployee.PhotoPath;
             }
 
             return employee;
